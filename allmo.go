@@ -9,10 +9,10 @@ import (
 )
 
 //show all modules.
-func Mo() []string {
+func Mo(st string) []string {
 	result := []string{}
 	RestMap = make(map[string]int)
-	tt(varS)
+	tt(st)
 	for { // 此处一直阻塞，直到 start和end在一秒的时间区域内都是相等的时候然后退出。
 		// Blocked here until exit and end are equal in the time zone of one second and then exit.
 		start := len(RestMap)
