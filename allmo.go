@@ -19,7 +19,6 @@ func Mo(st string) []string {
 		time.Sleep(time.Second)
 		end := len(RestMap)
 		if start == end {
-			fmt.Println(end)
 			break
 		}
 	}
