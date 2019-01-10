@@ -29,9 +29,16 @@ func Mo(st string) []string {
 	return result
 
 }
+func findGo() ([]byte, error) {
+	return exec.Command("which", "go").Output()
+}
 func tt(s string) {
 	re := new(Result)
-	cmd := exec.Command("/usr/local/bin/go", "list", "-e", "-json", s)
+	dd, err := findGo()
+	if err != nil {
+		fmt.Println(err)
+	}
+	cmd := exec.Command(string(dd), "list", "-e", "-json", s)
 	data, err := cmd.Output()
 	if err != nil {
 		fmt.Print(err)
