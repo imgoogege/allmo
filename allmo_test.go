@@ -5,5 +5,5 @@ import (
 )
 
 func TestMo(t *testing.T) {
-	Mo()
+	Mo("github.com/googege/goo")
 }
