@@ -16,6 +16,6 @@ type Result struct {
 }
 
 func init() {
-	flag.StringVar(&varS, "mo", "github.com/googege/allmo", "search all mo")
+	flag.StringVar(&varS, "mo", "github.com/googege/goo", "search all mo")
 	flag.Parse()
 }
