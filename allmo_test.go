@@ -1,9 +1,10 @@
 package allmo
 
 import (
+	"fmt"
 	"testing"
 )
 
 func TestMo(t *testing.T) {
-	Mo("github.com/googege/goo")
+	fmt.Println(Mo("github.com/googege/allmo"))
 }

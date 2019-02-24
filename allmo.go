@@ -37,7 +37,7 @@ func tt(s string) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	cmd := exec.Command(string(dd), "list", "-e", "-json", s)
+	cmd := exec.Command(string(dd[:len(dd)-1]), "list", "-e", "-json", s)// 去除换行符
 	data, err := cmd.Output()
 	if err != nil {
 		fmt.Print(err)
