@@ -6,5 +6,5 @@ import (
 )
 
 func TestMo(t *testing.T) {
-	fmt.Println(Mo("github.com/googege/allmo"))
+	fmt.Println(Mo("."))
 }

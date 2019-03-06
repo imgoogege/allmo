@@ -16,7 +16,7 @@ func Mo(st string) []string {
 	for { // 此处一直阻塞，直到 start和end在一秒的时间区域内都是相等的时候然后退出。
 		// Blocked here until exit and end are equal in the time zone of one second and then exit.
 		start := len(RestMap)
-		time.Sleep(time.Second)
+		time.Sleep(time.Second /10000000)
 		end := len(RestMap)
 		if start == end {
 			break
@@ -25,6 +25,7 @@ func Mo(st string) []string {
 	for k, _ := range RestMap {
 		result = append(result, k)
 	}
+	fmt.Println(len(result))
 	return result
 
 }
